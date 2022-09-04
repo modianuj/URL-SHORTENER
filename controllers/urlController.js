@@ -19,7 +19,6 @@ module.exports.createUrl = async (req, res) => {
 
     if (existsUrl) {
       res.render('home', {
-        // show_url: `http://localhost:1923/${existsUrl.short_url}`,
         show_url: existsUrl,
       });
     } else {
