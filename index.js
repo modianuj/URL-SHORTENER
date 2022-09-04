@@ -4,7 +4,7 @@ const flash = require('connect-flash');
 
 // for server
 const app = express();
-const port = '1923';
+const port = process.env.PORT || 8080;
 const host = 'localhost';
 
 // database
