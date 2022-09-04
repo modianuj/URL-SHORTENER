@@ -5,7 +5,6 @@ const flash = require('connect-flash');
 // for server
 const app = express();
 const port = process.env.PORT || 8080;
-const host = 'localhost';
 
 // database
 const db = require('./config/mongoose');
@@ -37,9 +36,9 @@ app.use('/assets', express.static('./assets'));
 // for routes
 app.use('/', require('./routes/index'));
 
-app.listen(port, host, (error) => {
+app.listen(port, (error) => {
   if (error) {
     console.log(`server not started`);
   }
-  console.log(`server is running on http://${host}:${port}`);
+  console.log(`server is running on ${port}`);
 });
